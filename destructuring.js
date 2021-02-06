@@ -22,7 +22,7 @@ var carDetails = {
 */
 
 //Code Here
-
+const {color, make, model, year} = carDetails;
 
 
 ////////// PROBLEM 2 //////////
@@ -35,7 +35,7 @@ var carDetails = {
 
 function greeting( obj ) {
   //Code Here
-  
+  const {firstName, lastName, title} = obj;
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
   // Do not edit the code above.
@@ -54,7 +54,10 @@ function greeting( obj ) {
 */
 
 //Code Here
-
+function totalPopulation(object) {
+const {utah, california, texas, arizona} = object
+return utah + california + texas + arizona
+}
 
 
 ////////// PROBLEM 4 //////////
@@ -68,7 +71,16 @@ function greeting( obj ) {
 */
 
 //Code Here
+// function ingredients(object) {
 
+// }
+
+let ingredients = (object) => {
+  let newArr = []
+  let destR = {carb, fat, protein} = object;
+  newArr.push(carb, fat, protein);
+  return newArr
+};
 
 
 ////////// PROBLEM 5 //////////
@@ -86,6 +98,9 @@ function greeting( obj ) {
 */
 
 //Code Here
+let largeNumbers = ({first, second, third}) => {
+    return Math.min(first, second, third)
+};
 
 
 
@@ -97,6 +112,33 @@ function greeting( obj ) {
   Find the longest array and return that array.
 */
 
-//Code Here
+//Code Here // this freaking problem took me so damn long to get
+let numberGroups = ({a, b, c}) => {
+  let arr = [a,b,c]
+  let long = a;
 
+  for (let i = 0; i < arr.length; i++ ) {
+    if(arr[i].length > long.length) {
+      long = arr[i]
+    } 
+  }
+  return long
+};
+
+
+// let numberGroups = ({a, b, c}) => {
+//   let long = a;
+//   for (let i = 0; i < long.length; i++ ) {
+//     if(b.length < c.length) {
+//       console.log('this is c')
+//       return c
+//     } else if (c.length < a.length) {
+//       console.log('this is a')
+//       return  a
+//     } else {
+//       console.log('this is b')
+//       return b
+//     }
+//   }
+// };
 
