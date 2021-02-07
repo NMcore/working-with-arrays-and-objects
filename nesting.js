@@ -63,7 +63,7 @@ function employeeUpdater() {
     }
   }
   return employees
-};
+}
 
 
 
@@ -96,7 +96,7 @@ function removeDuplicates(workplaceAccidents) {
     }
   }
   return workplaceAccidents
-};
+}
 
 
 
@@ -158,7 +158,7 @@ var myCar = {
   ]
 }
 
-console.log(myCar.length)
+
 // Do not edit the code above.
 
 /*
@@ -170,17 +170,18 @@ console.log(myCar.length)
     3. Change atFaultForAccident from true to false.
 */
 
-//Code Here
-function recordCleaner() {
-  for (let i = 0 ; i < myCar.length; i++) { 
-    for (let j = 0; j < myCar[i].length; j++) {
-      if(myCar.accidents[j].atFaultForAccident === true) {
-        console.log(myCar.accidents[i].atFaultForAccident)
-      }
+
+/* Had an ah-ha moment here FINALLY on the nested for in loops, not sure why it took me so long to 
+think of this... It's literally in the title of this file */
+
+function recordCleaner () {
+  for (var key in myCar) {
+    let getArr = myCar.accidents
+    for (var key2 in getArr) {
+      getArr[key2].atFaultForAccident = false
     }
   }
-  return recordCleaner
-};
+}
 
 
 
@@ -200,6 +201,18 @@ var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
     4. Return the modified numsArr.
 */
 
-//Code Here
-
-
+    
+function looper() {
+  for (var i = 0; i < numsArr.length; i++) {
+      for (var j = 0; j < numsArr[i].length; j++) {
+          if (numsArr[i][j] % 2 === 0) {
+            numsArr[i][j] = 'even' 
+          }  
+          else if(numsArr[i][j] % 2 === 1) {
+            numsArr[i][j] = 'odd' 
+          }
+      }
+  }
+  return numsArr
+}
+looper(numsArr)
