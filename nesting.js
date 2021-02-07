@@ -51,6 +51,19 @@ var employees = [
 */
 
 //Code Here
+function employeeUpdater() {
+  for (let i = 0 ; i < employees.length; i++) { 
+    if(employees[i].firstName === 'Theo') {
+        delete employees[i].firstName;
+    }
+      for (let j = 0 ; j < employees.length; j++) {
+        if (employees[j].firstName === 'Lorie') {
+          employees[j].department = 'HR';
+      }
+    }
+  }
+  return employees
+};
 
 
 
@@ -68,7 +81,24 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
     3. Return the updated array.
 */
 
-//Code Here
+//Code Here 
+
+/*I worked with Narty On this one.. this seems like a level 8 or 9 type problem for where i'm at in my understanding currently .
+ unless there is some basic thing I missed. I'm grateful he was willing to share and help me work through this one.  */
+
+
+function removeDuplicates(workplaceAccidents) {
+  for (let i = 0 ; i < workplaceAccidents.length; i++) { 
+      for (let j = workplaceAccidents.length -1 ; j > i; j--) {
+        if (workplaceAccidents[i] === workplaceAccidents[j]) {
+            workplaceAccidents.splice(j,1)
+      }
+    }
+  }
+  return workplaceAccidents
+};
+
+
 
 
 
@@ -97,8 +127,8 @@ var cat = {
 */
 
 //Code Here
-var grumpyActivity;
-var fluffy2ndFriend;
+var grumpyActivity = cat['catFriends'][0].activities[1];
+var fluffy2ndFriend  = cat['catFriends'][1].name;
 
 
 
@@ -127,6 +157,8 @@ var myCar = {
     }
   ]
 }
+
+console.log(myCar.length)
 // Do not edit the code above.
 
 /*
@@ -139,6 +171,17 @@ var myCar = {
 */
 
 //Code Here
+function recordCleaner() {
+  for (let i = 0 ; i < myCar.length; i++) { 
+    for (let j = 0; j < myCar[i].length; j++) {
+      if(myCar.accidents[j].atFaultForAccident === true) {
+        console.log(myCar.accidents[i].atFaultForAccident)
+      }
+    }
+  }
+  return recordCleaner
+};
+
 
 
 

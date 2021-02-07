@@ -32,7 +32,7 @@ In this next example, we are accessing the property names themselves. Uncomment 
 
 
 
-////////// PROBLEM 1 //////////  //HELP
+////////// PROBLEM 1 ////////// 
 
 /*
 Inside the function showValues, write a for in loop that concatenates each of the property values and returns the concatenated string.
@@ -109,7 +109,7 @@ If the property name starts with an 'sh', concatenate the value to the string va
 By the end of the for in loop, you should have a sentence, return that sentence.
 */
 
-//Code Here //HELP
+//Code Here //
 function secrets( obj ) {
     let str = '';
     for(var key in obj) {
